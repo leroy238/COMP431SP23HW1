@@ -76,8 +76,6 @@ def name(index):
         letDigIndex = letDigStr(index)
         if letDigIndex > index:
             return letDigIndex
-        else:
-            print("ERROR -- let-dig-string")
     else:
         print("ERROR -- name")
     return -1
