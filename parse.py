@@ -77,9 +77,9 @@ def name(index):
         if letDigIndex > index:
             return letDigIndex
         else:
-            print("Error -- let-dig-string")
+            print("ERROR -- let-dig-string")
     else:
-        print("Error -- name")
+        print("ERROR -- name")
     return -1
 
 def element(index):
@@ -88,7 +88,7 @@ def element(index):
         letterIndex += 1
 
     if letterIndex == index:
-        print("Error -- element")
+        print("ERROR -- element")
         return -1
 
     nameIndex = name(index)
@@ -123,7 +123,7 @@ def localPart(index):
     if stringIndex > index:
         return stringIndex
     else:
-        print("Error -- string")
+        print("ERROR -- string")
     return -1
 
 def mailbox(index):
@@ -136,7 +136,7 @@ def mailbox(index):
             else:
                 return -1
         else:
-            print("Error -- mailbox")
+            print("ERROR -- mailbox")
     return -1
 
 def path(index):
@@ -147,9 +147,9 @@ def path(index):
             if curr_message[mailIndex] == '>':
                 return mailIndex + 1
             else:
-                print("Error -- path")
+                print("ERROR -- path")
     else:
-        print("Error -- path")
+        print("ERROR -- path")
     return -1
 
 def reversePath(index):
@@ -169,22 +169,22 @@ def isMailFromCMD():
             index += 1
     if index == 4:
         if index >= len(curr_message):
-            print("Error -- whitespace")
+            print("ERROR -- whitespace")
             return False
         whitespaceIndex = whitespace(index)
         if whitespaceIndex > index:
             index = whitespaceIndex
         else:
-            print("Error -- whitespace")
+            print("ERROR -- whitespace")
             return False
         for character in fromArray:
             if curr_message[index] == character:
                 index += 1
         if index - whitespaceIndex != 5:
-            print("Error -- mail-from-cmd")
+            print("ERROR -- mail-from-cmd")
             return False
     else:
-        print("Error -- mail-from-cmd")
+        print("ERROR -- mail-from-cmd")
         return False
 
     nullIndex = isNullspace(index)
@@ -196,20 +196,20 @@ def isMailFromCMD():
         else:
             return False
     else:
-        print("Error -- mail-from-cmd")
+        print("ERROR -- mail-from-cmd")
         return False
 
     nullIndex = isNullspace(index)
     if nullIndex >= index:
         index = nullIndex
     else:
-        print("Error -- nullspace")
+        print("ERROR -- nullspace")
         return False
     
     if isCRLF():
         return True
     else:
-        print("Error -- mail-from-cmd")
+        print("ERROR -- mail-from-cmd")
         return False
 
 def main():
