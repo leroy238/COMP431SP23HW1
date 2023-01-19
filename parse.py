@@ -216,7 +216,7 @@ def main():
     global curr_message
     for line in sys.stdin:
         curr_message = line
-        print(curr_message)
+        print(curr_message[:len(curr_message)-1])
         if isMailFromCMD():
             print("Sender ok")
 
