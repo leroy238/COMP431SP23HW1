@@ -29,8 +29,8 @@ def isSpecial(index):
         return True
     return False
 
-def isCRLF():
-    if curr_message.endswith('\n'):
+def isCRLF(index):
+    if curr_message[index] == '\n':
         return True
     return False
 
@@ -148,6 +148,8 @@ def path(index):
                 return mailIndex + 1
             else:
                 print("ERROR -- path")
+        else:
+            return -1
     else:
         print("ERROR -- path")
     return -1
@@ -206,10 +208,10 @@ def isMailFromCMD():
         print("ERROR -- nullspace")
         return False
     
-    if isCRLF():
+    if isCRLF(nullIndex):
         return True
     else:
-        print("ERROR -- mail-from-cmd")
+        print("ERROR -- CRLF")
         return False
 
 def main():

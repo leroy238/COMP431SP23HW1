@@ -12,3 +12,9 @@ MAIL FROM: <jaffee$cs.unc.edu>
 MAIL FROM:<jeffay@cs.unc,edu>
 MAIL FROM:<jeffay@cs.unc.edu >
 MAIL FROM:<jeffay@cs.unc.edu
+MAIL FROM:<jeffay@>
+MAIL FROM:<jeffay@edu><
+MAIL FROM:<jeffay@cs .unc.edu>
+MAIL FROM:<jeffay@cs.>
+MAIL FROM:< jeffay@cs.unc.edu>
+MAIL FROM:<jeffay @cs.unc.edu>
